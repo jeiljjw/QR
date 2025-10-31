@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR 코드 생성기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-link">
+                    <span class="logo-icon">📱</span>
+                    QR Generator
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>QR 코드 생성기</h1>
+            <div class="input-section">
+                <input type="text" id="text-input" placeholder="QR 코드로 변환할 텍스트를 입력하세요">
+                <button id="generate-btn">QR 코드 생성</button>
+            </div>
+            <div class="qr-section">
+                <div class="qr-container" id="qr-container" style="display: none;">
+                    <div id="qr-code"></div>
+                </div>
+                <button id="download-btn" style="display: none;">QR 코드 다운로드</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>About QR Generator</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>QR Code Generator</h3>
+                        <p>Our QR Code Generator quickly and easily converts text into QR codes. The generated QR codes can be scanned by any smartphone camera and provide high-quality, clear images.</p>
+
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><strong>High-Quality QR Codes:</strong> Generates clear QR codes with the highest level of error correction.</li>
+                            <li><strong>Instant Generation:</strong> Converts your input text to QR codes in real-time.</li>
+                            <li><strong>Download Support:</strong> Download generated QR codes in PNG format.</li>
+                            <li><strong>Mobile-Friendly:</strong> Works perfectly on all devices.</li>
+                            <li><strong>Free to Use:</strong> Completely free to use.</li>
+                        </ul>
+
+                        <h4>How to Use</h4>
+                        <ol>
+                            <li>Enter the text you want to convert in the text input field.</li>
+                            <li>Click the "Generate QR Code" button.</li>
+                            <li>View your generated QR code.</li>
+                            <li>Save the image using the "Download QR Code" button.</li>
+                        </ol>
+                    </div>
+                    <div class="about-image">
+                        <div class="demo-qr">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZmZmZmZmIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDAwMDAwIiBmb250LXNpemU9IjE0Ij5EZW1vIFFSPC90ZXh0Pgo8L3N2Zz4K" alt="Demo QR Code" style="width: 200px; height: 200px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🚀 QR Generator Pro</h3>
+                    <p>혁신적인 QR 코드 생성 솔루션으로 디지털 세상을 연결하세요. 첨단 기술로 구현된 최고 품질의 QR 코드를 경험해보세요.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>⚡ 빠른 기능</h4>
+                    <ul>
+                        <li><a href="#home">🏠 홈으로 이동</a></li>
+                        <li><a href="#about">ℹ️ 서비스 소개</a></li>
+                        <li><a href="#generate">🎯 QR 생성하기</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>✨ 특별 기능</h4>
+                    <ul>
+                        <li>🎨 커스텀 디자인</li>
+                        <li>📱 모바일 최적화</li>
+                        <li>⚡ 실시간 생성</li>
+                        <li>💾 고화질 다운로드</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 QR Generator. 모든 권리 보유.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
